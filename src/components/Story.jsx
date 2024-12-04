@@ -1,12 +1,47 @@
 import React, { useRef } from 'react'
 import AnimatedTitle from './AnimatedTitle'
+import gsap from 'gsap';
+import RoundedCorners from './RoundedCorner';
+import Button from './Button';
+
 const Story = () => {
-    const frameref=useRef(null);
+    const frameRef=useRef(null);
+
     const handleMouseLeave=()=>{
+        const element= frameRef.current;
 
-    }
-    const handleMouseMove=()=>{
+        if(element){
+            gsap.to(element,{
+                duration:0.3,
+                rotateX:0,
+                rotateY:0,
+                ease:'power1.inOut' 
+            });
+        }
+    };
+    const handleMouseMove=(e)=>{
+        const {clientX,clientY}=e;
+        const element= frameRef.current;
 
+        if(!element)return;
+
+        const rect= element.getBoundingClientRect();
+        const x= clientX-rect.left;
+        const y= clientY-rect.top;
+
+        const centerX=rect.width/2;
+        const centerY=rect.width/2;
+
+        const rotateX=((y-centerY)/centerY)*-10;
+        const rotateY=((x-centerX)/centerX)*10;
+
+        gsap.to(element,{
+            duration:0.3,
+            rotateX,
+            rotateY,
+            transformPerspective:500,
+            ease:'power1.inOut' 
+        })
     }
   return (
     <section id='story'
@@ -14,7 +49,7 @@ const Story = () => {
         <div className='flex size-full flex-col items-center py-10 pb-24'>
             <p className='font-general text-sm uppercase md:text-[10px]'>the multiversal ip world
             </p>
-        </div>
+        
 
         <div className='relative size-full'>
             <AnimatedTitle
@@ -38,11 +73,24 @@ const Story = () => {
                         />
                     </div>
                 </div>
+                {/* for rounded corners we have added svg */}
+                <RoundedCorners/>
             </div>
-
+          </div>
+          <div id='lower-texts' className='mt-0 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end'>
+            <div className='flex h-full w-fit flex-col items-center md:items-start'>
+                <p className='mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start'>
+                    Where realms converge, lies Zynx and the boundless pillar.
+                    Discover its secrets and shape your fate amidst infinite opportunities.
+                </p>
+                <Button
+                id="realm-btn"
+                title="discover prologue"
+                containerClass="mt-5"
+                />
+            </div>
+          </div>
         </div>
-
-
     </section>
   )
 }
