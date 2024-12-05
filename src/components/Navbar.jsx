@@ -9,7 +9,7 @@ const navItems=["Nexus","Vault","Prologue","About","Contact"];
 
 const Navbar = () => {
     //State for toggeling Audio and Visula Indicator
-    const [isAudioPlaying, setIsAudioPlaying] = useState(true);
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
     const [isIndicatorActive, setIsIndicatorActive] = useState(false);
 
     //refs for audio and Navigation center
