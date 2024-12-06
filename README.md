@@ -44,8 +44,8 @@ To get started with Sumz, follow these steps:
 ### 1. Clone the Repository
 Clone the repository to your local machine using:
 ```bash
-git clone https://github.com/adityapandey78/Sumz.git
-cd Sumz
+git clone https://github.com/adityapandey78/Zynx.git
+cd Zynx
 ```
 
 ### 2.Install Dependencies
