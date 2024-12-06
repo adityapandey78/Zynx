@@ -5,8 +5,20 @@ Zynx is a sleek, modern web application showcasing the power of intuitive design
 ## 🌟 Features
 
 - **Modern Web Design**: Leveraging contemporary design trends for an appealing and user-friendly interface.
-- **Interactive Animations**: Built using the [GSAP](https://gsap.com/) library for smooth, captivating transitions and animations.
-- **Responsive Architecture**: Ensures an optimal experience across devices.
+- **Interactive Animations**: Built using the [GSAP](https://gsap.com/) library for smooth, captivating transitions and animations.  
+- **Scroll-Based Animations**: Dynamic animations triggered by scrolling for a more engaging user experience.
+
+- **Clip Path Shaped Animations**: Unique geometric transitions using CSS clip-paths to create visually stunning effects.
+
+- **3D Hover Effects**: Interactive 3D transformations that respond to user interactions for a modern feel.
+
+- **Video Transitions**: Seamlessly integrated video elements to enhance storytelling and flow.
+
+- **Smooth UI/UX**: Polished interfaces with buttery-smooth interactions for an intuitive user journey.
+
+- **Responsive Architecture**: Flawless adaptation across all devices, ensuring a consistent experience.
+
+and many more, including code architecture and reusability
 
 ## ⚙️ Technologies & Tools
 
@@ -44,4 +56,7 @@ npm install
 ### 3.Run the application:  
 ```bash
 npm run dev
-```
+```  
+# ⚠️ Disclaimer  
+All design are inspired from Zentry. This project is created purely for educational purposes and is not intended for commercial use or public deployment.
+
