@@ -25,7 +25,7 @@ export const BentoTilt=({children, className=" "})=>{
     };
     const handleMouseLeave=(e)=>{
         setTransformStyle('');
-        //console.log("Moouse Leaved");
+        //console.log("Moouse Leaved").....;
         
     }
 
